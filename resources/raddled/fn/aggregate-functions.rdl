@@ -1,0 +1,5 @@
+define(count,(any*),number),
+define(avg,(any*),any),
+define(max,(any*),any),
+define(min,(any*),any),
+define(sum,(any*),any)

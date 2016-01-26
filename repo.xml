@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description/>
+    <author>Wouter Hager</author>
+    <website>http://raddle.org</website>
+    <status>alpha</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <target>raddle</target>
+    <prepare>pre-install.xql</prepare>
+    <finish/>
+    <permissions user="admin" group="dba" mode="rw-rw-r--"/>
+    <deployed>2015-11-17T17:39:40.459+01:00</deployed>
+</meta>

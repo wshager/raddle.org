@@ -1,0 +1,2 @@
+define(string-length,(string),number),
+define(concat,(any*-),string)

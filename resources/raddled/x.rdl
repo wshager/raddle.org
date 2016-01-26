@@ -1,0 +1,2 @@
+module(x,http://raddle.org/x,extends basic functions with common utilities),
+define(x:call,(function(*),item()*),item()*)

@@ -1,0 +1,6 @@
+define(by-id,(string),element),
+define(element,(string,map),element),
+define(attribute,(string,map),attribute),
+define(query,(string),element*),
+define(place,(element,string,element),element),
+define(remove,(element),element)

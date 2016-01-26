@@ -1,0 +1,8 @@
+module(fn,http://www.w3.org/2005/xpath-functions,core),
+use(fn/aggregate-functions),
+use(fn/higher-order-functions),
+use(fn/numeric-functions),
+use(fn/string-assembly-functions),
+use(fn/string-regex-functions),
+use(fn/string-value-functions),
+use(fn/external-access-functions)

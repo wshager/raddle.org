@@ -1,0 +1,4 @@
+module(n,http://raddle.org/n,implements native syntax elements from xquery as functions),
+use(op),
+define(n:if,(boolean,item()*,item()*),item()*),
+define(n:eq,(item()*,item()*),boolean,op:equals($1,$2))

@@ -1,0 +1,8 @@
+define(element,(string),element),
+define(attribute,(string),attribute),
+define(map,(),any),
+define(array,(),any),
+define(element,(string,any*),element),
+define(attribute,(string,any*),attribute),
+define(map,(any*),any),
+define(array,(any*),any)

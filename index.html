@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" class="templates:surround?with=templates/page.html&amp;at=content">
+    <div class="row">
+        <h3>This is not a library</h3>
+        <p>Raddle is both a format and a platform to host web-friendly function definitions with universal qualities.</p>
+    </div>
+    <hr/>
+    <div class="row">
+        <h3 id="overview">Overview</h3>
+        <div class="col-md-4"><!-- Features item -->
+            <div class="f-item">
+                <h4>Fully-featured</h4>
+                <p>The Raddle core library is packed with ready-to-use functionality.</p>
+            </div>
+        </div>
+        <div class="col-md-4"><!-- Features item -->
+            <div class="f-item">
+                <h4>Functional</h4>
+                <p>Raddle has all the good things from functional programming.</p>
+            </div>
+        </div>
+        <div class="col-md-4"><!-- Features item -->
+            <div class="f-item">
+                <h4>Fast!</h4>
+                <p>Raddle compiles to native code in the blink of an eye.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"><!-- Features item -->
+            <div class="f-item">
+                <h4>URL-encodable</h4>
+                <p>Simple syntax lets you focus on the what, not the how.</p>
+            </div>
+        </div>
+        <div class="col-md-4"><!-- Features item -->
+            <div class="f-item">
+                <h4>Type-safe</h4>
+                <p>With Raddle's type declarations, types are kept in check.</p>
+            </div>
+        </div>
+        <div class="col-md-4"><!-- Features item -->
+            <div class="f-item">
+                <h4>Free</h4>
+                <p>Raddle is licensed under the AFL or BSD license.</p>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <h3 id="samples">Samples</h3>
+        <code id="ex1" data-input="world!">use(core),define(hello,(string),element(),elem(p,(attr(class,hello),cat(hello%20,$1)))),local:hello(.)</code>&#160;<button class="edit" onclick="edit('ex1')">Edit</button>
+        <p>The function <code>local:hello</code> is defined, and uses functions from the 'core' module. It takes a string and returns a HTML paragraph element containing the input text, for example <code>world!</code>.<br/>Note that any definitions made outside of a module are prefixed with 'local'.</p>
+        <br/>
+        <code id="ex2" data-input="[1,2,3]">use(core),define(sum,(array(*)),integer,fold-left($1,0,add#2)),local:sum(.)</code>&#160;<button class="edit" onclick="edit('ex2')">Edit</button>
+        <p>The function <code>local:sum</code> is defined, which takes a list of integers (e.g. <code>[1,2,3]</code>) and calculates the total of all integers in the list.<br/>All arguments are treated like text strings, while words with a '#' (like <code>add#2</code>) are interpreted as references to functions. Arguments that look like numbers are automatically converted.</p>
+    </div>
+    <hr/>
+    <div class="row">
+        <h3 id="tiy">Try it yourself</h3>
+        <textarea id="code">use(core),define(hello,(string),element(),elem(p,(attr(class,hello),cat(hello%20,$1)))),local:hello(.)</textarea>
+        <br/>
+        Input (text or JSON): <input id="input" name="input" value="world!"/>
+        <button id="hello">Run!</button>
+        <br/>
+        <textarea id="result"/>
+        <div style="padding:.5em;border:1px solid #ccc;">Please note that this is a sandbox: the default function prefix is hardwired to the 'core' module in these examples. This 'core' module supports only a limited number of functions.</div>
+    </div>
+    <hr/>
+    <div class="row">
+        <h3 id="syntax">Syntax</h3>
+        <p>Raddle's syntax is quite simple: the only syntactic characters are parentheses and commas (and occasionally dots). Modules are loaded with <code>use</code>. New functions are defined with <code>define</code>. It follows this convention:
+        </p>
+        <div class="explanation">
+            <code>define</code>(<pre>the name of the function</pre>,(<pre>a sequence of argument types</pre>),<pre>the type that the function should return</pre>,<pre>the function body</pre>)</div>
+        <p/>
+        <p>Functions can be chained by sequencing them. A dot is used to take the output from the previous function as the input for the current one.<br/>For example: <code data-input="1" id="ex3">use(core),(add(.,2),add(.,2),add(.,2))</code> with input <code>1</code> results in <code>7</code>.&#160;<button class="edit" onclick="edit('ex3')">Edit</button>
+            <br/>If no dot is found in any of the functions, all will simply be executed, resulting in a sequence of values.
+        <br/>A dot is also used to allow for external input, as the example above clearly shows.</p>
+    </div>
+    <hr/>
+    <div class="row">
+        <h3 id="running">Running Raddle</h3>
+        <p>Raddle is designed to work with a variety of host languages, such as java and javascript.<br/>
+            Both parser and compiler are written in raddle, and so its functionality can be adapted to any host language by providing custom translation functions.
+        </p>
+    </div>
+</div>

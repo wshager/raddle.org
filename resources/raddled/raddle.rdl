@@ -1,0 +1,3 @@
+module(raddle,http://raddle.org,raddle parser and transpiler in raddle),
+use(fn,n,x),
+define(raddle:parse,(string),array,if(n:eq($1,''),(),call((analyze-string(.,'(\))|([&\|,])?([\+\*\$\-:\w%\._\/?#]*)(\(?))'),raddle:wrap(.,())),$1)))

@@ -1,0 +1,2 @@
+define(tokenize,(string,string),string*),
+define(replace,(string?,string,string),string)

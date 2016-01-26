@@ -1,0 +1,2 @@
+define(new,(),map),
+define(transform,(map,any,(any*)),map)

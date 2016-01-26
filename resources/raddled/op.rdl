@@ -1,0 +1,3 @@
+module(op,http://www.w3.org/2005/xpath-functions/op,op),
+use(op/numeric-arithmetic-operators),
+use(op/numeric-comparison-operators)

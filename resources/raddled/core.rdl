@@ -1,0 +1,5 @@
+module(core,http://raddle.org/core,raddle core library),
+use(fn,n),
+define(elem,n:element),
+define(attr,n:attribute),
+define(cat,fn:concat)
